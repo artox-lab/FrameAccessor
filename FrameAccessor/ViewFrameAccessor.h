@@ -21,8 +21,8 @@
 @interface View (FrameAccessor)
 
 // Frame
-@property (nonatomic) CGPoint viewOrigin;
-@property (nonatomic) CGSize viewSize;
+@property (nonatomic) CGPoint origin;
+@property (nonatomic) CGSize size;
 
 // Frame Origin
 @property (nonatomic) CGFloat x;
@@ -39,9 +39,7 @@
 @property (nonatomic) CGFloat right;
 
 // Center Point
-#if !IS_IOS_DEVICE
-@property (nonatomic) CGPoint center;
-#endif
+@property (nonatomic) CGPoint center NS_AVAILABLE(10_6, 4_3);
 @property (nonatomic) CGFloat centerX;
 @property (nonatomic) CGFloat centerY;
 

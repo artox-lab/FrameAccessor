@@ -13,24 +13,24 @@
 
 #pragma mark Frame
 
-- (CGPoint)viewOrigin
+- (CGPoint)origin
 {
     return self.frame.origin;
 }
 
-- (void)setViewOrigin:(CGPoint)newOrigin
+- (void)setOrigin:(CGPoint)newOrigin
 {
     CGRect newFrame = self.frame;
     newFrame.origin = newOrigin;
     self.frame = newFrame;
 }
 
-- (CGSize)viewSize
+- (CGSize)size
 {
     return self.frame.size;
 }
 
-- (void)setViewSize:(CGSize)newSize
+- (void)setSize:(CGSize)newSize
 {
     CGRect newFrame = self.frame;
     newFrame.size = newSize;
@@ -137,7 +137,6 @@
 
 #pragma mark Center Point
 
-#if !IS_IOS_DEVICE
 - (CGPoint)center
 {
     return CGPointMake(self.left + self.middleX, self.top + self.middleY);
@@ -148,7 +147,6 @@
     self.left = newCenter.x - self.middleX;
     self.top = newCenter.y - self.middleY;
 }
-#endif
 
 - (CGFloat)centerX
 {
